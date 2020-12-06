@@ -1,0 +1,19 @@
+<h2>LISTADO USUARIOS</h2>
+<p-dataView [value]="usuarios" layout="grid">
+
+    <ng-template let-user pTemplate="gridItem">
+        <div class="p-col-12 p-md-4 p-p-2">
+            <p-card>
+                <p-header>
+                    <img [src]=user.avatar alt="">
+                </p-header>
+                
+                <p-footer>
+                    <h3>{{user.fullName}}</h3>
+                    {{user.email}}
+                </p-footer>
+            </p-card>
+        </div>
+    </ng-template>
+</p-dataView>
+
